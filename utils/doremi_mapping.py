@@ -11,7 +11,7 @@ def create_do_re_mi_map(
     scale_obj: MajorScale | MinorScale,
 ) -> dict[str, str]:
     # List of do-re-mi syllables for the natural notes
-    do_re_mi_names = ["do", "re", "mi", "fa", "sol", "la", "ti"]
+    do_re_mi_names = ["do", "rai", "mi", "fa", "sol", "la", "xi"]
     do_re_mi_map = {}
 
     # Get all pitches in the scale and their corresponding do-re-mi names
