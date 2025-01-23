@@ -2,7 +2,11 @@ import json
 from models.svp import Svp
 from utils.word_utils import generate_words_from_svp, update_lyric_to_doremi, update_name_to_doremi
 from utils.doremi_mapping import get_doremi_from_words
+import click
+from click import command, argument
 
+@command()
+@argument("input_file", type=click.Path(exists=True))
 def replace_lyrics(input_file: str):
     # 读取原始 svp 文件
     with open(input_file, "r", encoding="utf-8") as f:
@@ -32,4 +36,4 @@ def replace_lyrics(input_file: str):
         f.write(json_output + '\x00') 
 
 if __name__ == "__main__":
-    replace_lyrics("dummy.svp") 
+    replace_lyrics() 
